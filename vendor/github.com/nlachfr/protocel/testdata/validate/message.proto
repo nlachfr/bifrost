@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+package testdata.validate;
+option go_package = "github.com/nlachfr/protocel/testdata/validate";
+
+import "validate/validate.proto";
+
+message Message {
+    string name = 1;
+}
+
+message MessageExpr {
+    option (protocel.validate.message) = {
+        rule: {
+            programs: {
+                expr: 'name != ""'
+            }
+        }
+    };
+    string name = 1;
+}
+
+message MessageNested {
+    MessageExpr message_expr = 1;
+};
+
+message MessageNestedExpr {
+    option (protocel.validate.message) = {
+        rule: {
+            programs: {
+                expr: 'message_expr.name != ""'
+            }
+        }
+    };
+    MessageExpr message_expr = 1;
+};
+
+message MessageOptions {
+    option (protocel.validate.message) = {
+        rule: {
+            programs: {
+                expr: 'name != emptyName'
+            }
+        }
+    };
+    string name = 1;
+}
+
+message MessageLocalOptions {
+    option (protocel.validate.message) = {
+        rule: {
+            options: {
+                globals: {
+                    constants: [{
+                        key: "emptyName"
+                        value: ""
+                    }]
+                }
+            }
+            programs: {
+                expr: 'name != emptyName'
+            }
+        }
+    };
+    string name = 1;
+}
