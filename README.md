@@ -10,12 +10,12 @@
 
 *This project is still in alpha: APIs should be considered unstable and likely to change.*
 
-Bifrost is a reflective protobuf router and reverse proxy. It uses your protobuf definitions for dynamically generating the gateway and is able to check input based on user-defined rules (see [protoc-gen-cel-validate](https://github.com/nlachfr/protocel) for more details regarding rules).
+Bifrost is a reflective protobuf router and reverse proxy. It uses your protobuf definitions for dynamically generating the gateway and is able to check input based on user-defined rules (see [protoc-gen-cel-validate](https://github.com/nlachfr/protoc-gen-cel-validate) for more details regarding rules).
 
 It features :
 
 - `gRPC`, `gRPC-web` and `connect` protocols (binding and proxying)
-- [protoc-gen-cel-validate](https://github.com/nlachfr/protocel) validation rules
+- [protoc-gen-cel-validate](https://github.com/nlachfr/protoc-gen-cel-validate) validation rules
 - supports Go plugin for loading your custom rules
 
 ## Installation

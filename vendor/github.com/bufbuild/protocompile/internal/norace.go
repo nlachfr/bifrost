@@ -1,4 +1,4 @@
-// Copyright 2021-2023 Buf Technologies, Inc.
+// Copyright 2020-2022 Buf Technologies, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,21 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-//go:build go1.19
+//go:build !race
 
-package connect
+package internal
 
-import (
-	"errors"
-	"fmt"
-	"net/http"
-)
-
-func asMaxBytesError(err error, tmpl string, args ...any) *Error {
-	var maxBytesErr *http.MaxBytesError
-	if ok := errors.As(err, &maxBytesErr); !ok {
-		return nil
-	}
-	prefix := fmt.Sprintf(tmpl, args...)
-	return errorf(CodeResourceExhausted, "%s: exceeded %d byte http.MaxBytesReader limit", prefix, maxBytesErr.Limit)
-}
+const IsRace = false

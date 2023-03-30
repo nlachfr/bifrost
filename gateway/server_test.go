@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	tvalidate "github.com/nlachfr/protocel/testdata/validate"
-	"github.com/nlachfr/protocel/validate"
+	tvalidate "github.com/nlachfr/protoc-gen-cel-validate/testdata/validate"
+	"github.com/nlachfr/protoc-gen-cel-validate/validate"
 )
 
 func TestFindServiceUpstream(t *testing.T) {
@@ -76,7 +76,7 @@ func TestFindServiceUpstream(t *testing.T) {
 func TestNewServer(t *testing.T) {
 	linker, err := NewLinker(context.Background(), &Configuration_Files{
 		Sources: []string{"testdata/validate/service.proto"},
-		Imports: []string{"../vendor/github.com/nlachfr/protocel"},
+		Imports: []string{"../vendor/github.com/nlachfr/protoc-gen-cel-validate"},
 	})
 	if err != nil {
 		t.Error(err)
