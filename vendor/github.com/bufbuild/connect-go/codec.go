@@ -1,4 +1,4 @@
-// Copyright 2021-2022 Buf Technologies, Inc.
+// Copyright 2021-2023 Buf Technologies, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,6 +15,7 @@
 package connect
 
 import (
+	"errors"
 	"fmt"
 
 	"google.golang.org/protobuf/encoding/protojson"
@@ -92,6 +93,9 @@ func (c *protoJSONCodec) Unmarshal(binary []byte, message any) error {
 	protoMessage, ok := message.(proto.Message)
 	if !ok {
 		return errNotProto(message)
+	}
+	if len(binary) == 0 {
+		return errors.New("zero-length payload is not a valid JSON object")
 	}
 	var options protojson.UnmarshalOptions
 	return options.Unmarshal(binary, protoMessage)

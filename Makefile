@@ -14,7 +14,7 @@ $(PROTOC_GEN_GO):
 	go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28
 
 %.pb.go: %.proto
-	protoc -I. -Ivendor/github.com/nlachfr/protocel --go_out=. --go_opt=paths=source_relative $<
+	protoc -I. -Ivendor/github.com/nlachfr/protoc-gen-cel-validate --go_out=. --go_opt=paths=source_relative $<
 
 .PHONY: go-genproto
 go-genproto: $(PROTOC_GEN_GO) $(GENPROTO_GO)

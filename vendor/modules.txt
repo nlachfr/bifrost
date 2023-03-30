@@ -1,11 +1,11 @@
 # github.com/antlr/antlr4/runtime/Go/antlr v1.4.10
 ## explicit; go 1.16
 github.com/antlr/antlr4/runtime/Go/antlr
-# github.com/bufbuild/connect-go v1.4.1
-## explicit; go 1.18
+# github.com/bufbuild/connect-go v1.5.2
+## explicit; go 1.19
 github.com/bufbuild/connect-go
 github.com/bufbuild/connect-go/internal/gen/connectext/grpc/status/v1
-# github.com/bufbuild/protocompile v0.2.0
+# github.com/bufbuild/protocompile v0.5.1
 ## explicit; go 1.18
 github.com/bufbuild/protocompile
 github.com/bufbuild/protocompile/ast
@@ -36,15 +36,15 @@ github.com/google/cel-go/interpreter
 github.com/google/cel-go/interpreter/functions
 github.com/google/cel-go/parser
 github.com/google/cel-go/parser/gen
-# github.com/nlachfr/protocel v0.2.3-0.20230130110010-516440e4585d
+# github.com/nlachfr/protoc-gen-cel-validate v0.3.0
 ## explicit; go 1.19
-github.com/nlachfr/protocel/testdata/validate
-github.com/nlachfr/protocel/validate
-github.com/nlachfr/protocel/validate/errors
-# github.com/stoewer/go-strcase v1.2.0
+github.com/nlachfr/protoc-gen-cel-validate/testdata/validate
+github.com/nlachfr/protoc-gen-cel-validate/validate
+github.com/nlachfr/protoc-gen-cel-validate/validate/errors
+# github.com/stoewer/go-strcase v1.3.0
 ## explicit; go 1.11
 github.com/stoewer/go-strcase
-# golang.org/x/net v0.5.0
+# golang.org/x/net v0.8.0
 ## explicit; go 1.17
 golang.org/x/net/http/httpguts
 golang.org/x/net/http2
@@ -52,24 +52,24 @@ golang.org/x/net/http2/h2c
 golang.org/x/net/http2/hpack
 golang.org/x/net/idna
 golang.org/x/net/nettest
-# golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
+# golang.org/x/sync v0.1.0
 ## explicit
 golang.org/x/sync/semaphore
-# golang.org/x/text v0.6.0
+# golang.org/x/text v0.8.0
 ## explicit; go 1.17
 golang.org/x/text/secure/bidirule
 golang.org/x/text/transform
 golang.org/x/text/unicode/bidi
 golang.org/x/text/unicode/norm
 golang.org/x/text/width
-# google.golang.org/genproto v0.0.0-20230109162033-3c3c17ce83e6
+# google.golang.org/genproto v0.0.0-20230330200707-38013875ee22
 ## explicit; go 1.19
 google.golang.org/genproto/googleapis/api
 google.golang.org/genproto/googleapis/api/annotations
 google.golang.org/genproto/googleapis/api/expr/v1alpha1
 google.golang.org/genproto/googleapis/rpc/context/attribute_context
 google.golang.org/genproto/googleapis/rpc/status
-# google.golang.org/protobuf v1.28.2-0.20220831092852-f930b1dc76e8
+# google.golang.org/protobuf v1.30.0
 ## explicit; go 1.11
 google.golang.org/protobuf/encoding/protojson
 google.golang.org/protobuf/encoding/prototext

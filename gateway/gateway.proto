@@ -31,5 +31,5 @@ message Configuration {
     repeated Server servers = 1;
     Files files = 2;
     repeated Plugin plugins = 3;
-    protocel.validate.Configuration validate = 10;
+    cel.validate.Configuration validate = 10;
 }

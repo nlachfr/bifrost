@@ -7,7 +7,7 @@ import (
 )
 
 func TestNewLinker(t *testing.T) {
-	validatePath, _ := filepath.Abs("../vendor/github.com/nlachfr/protocel/testdata/validate/")
+	validatePath, _ := filepath.Abs("../vendor/github.com/nlachfr/protoc-gen-cel-validate/testdata/validate/")
 	tests := []struct {
 		Name    string
 		Config  *Configuration_Files
@@ -47,8 +47,8 @@ func TestNewLinker(t *testing.T) {
 			Config: &Configuration_Files{
 				Sources: []string{"message.proto"},
 				Imports: []string{
-					"../vendor/github.com/nlachfr/protocel/testdata/validate",
-					"../vendor/github.com/nlachfr/protocel",
+					"../vendor/github.com/nlachfr/protoc-gen-cel-validate/testdata/validate",
+					"../vendor/github.com/nlachfr/protoc-gen-cel-validate",
 				},
 			},
 		},
